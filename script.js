@@ -1,25 +1,22 @@
 'use strict';
-function updateTimer(){
-    //detemination what time want to run on timer
-    const future=Date.parse('nov 13, 2022 12:00:01');
-    //taken the current time from the device
-    const now=new Date();
-    const diff=future-now;
+let quotes=[
+    'The secret to life is to love who you are.',
+    'Look for opportunities in every change in your life.',
+    'Persist while others are quitting.',
+    'and so on.'
+    ];
+const displayQutoes=function(){
+    let index=Math.floor(Math.random()*quotes.length);
 
-    const days=Math.floor(diff/(1000*60*60*24));
-    const hours=Math.floor(diff/(1000*60*60));
-    const mins=Math.floor(diff/(1000*60));
-    const sec=Math.floor(diff/(1000));
+    let quote=`<div class="card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>${quotes[index]}</p> 
+                    <i class="fas fa-quote-right"></i>
+                </div>`;
+    const quoteString=document.querySelector('#quote');
 
-    const d = days;
-    const h = hours - days * 24;
-    const m = mins - hours * 60;
-    const s = sec - mins * 60;
-
-    document.getElementById("timer").innerHTML =
-                                                `<div> ${d} <span>Days</span></div>
-                                                <div> ${h} <span>Hours</span></div>
-                                                <div>${m}  <span>Minutes</span></div>
-                                                <div> ${s} <span>Seconds</span></div>`;
+    quoteString.innerHTML=quote;
 }
-setInterval('updateTimer()',1000);
+
+const button=document.querySelector('.btn');
+button.addEventListener('click',displayQutoes);
