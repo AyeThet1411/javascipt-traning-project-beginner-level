@@ -4,84 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Height Conventer</title>
+    <title>Rock-Scissor-Paper</title>
     <style>
         body{
-            background-color: blanchedalmond;
-        }
-        form{
-            margin: 50px auto;
-            width: 500px;
-            height: 500px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-        }
-
-        label {
-            width: 150px;
-            color: white;
-            margin:  25px 50px 25px 0px;
-            font-size: 1.5em;
-            
-        }
-        label.inch{
-            margin: 25px 30px 25px 0px;
-        }
-        input#feet,
-        input#inches{
-            height: 40px;
-            width: 200px;
-            padding-left: 25px;
-            margin-left: 20px;
-            font-size: 1.5em;
-            border-radius: 10px;
-            
+            background-color: whitesmoke;
+            font-family: sans-serif;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            text-align: center;
         }
         h1{
-            text-align: center;
-            color: white;
-            padding-top: 50px;
+            font-size: 48px;
+        }
+        p,
+        .score,
+        .message{
+            font-size: 20px;
+        }
+        button{
+            font-size: 20px;
+            display: inline-block;
+            width: 150px;
+            height: auto;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .score,.message{
+            margin-bottom: 10px;
         }
 
-        .row{
-            width: 400px;
-            text-align: left;
-            margin: 25px auto;
-        }
-
-        #button{
-            background-color:blanchedalmond;
-            border: none;
-            color: black;
-            width: 175px;
-            padding: 10px 15px;
-            line-height: 1.2em;
-            font-size: 1.2em;
-            text-align: center;
-            margin: 50px 120px;
-        }
-
-        #results{
-            color: yellow;
-            font-size: 1.5em;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
-    <form action="" id="calculator">
-        <h1>Height Converter</h1>
-        <div class="row">
-        <label for="feet">Feet</label><input id="feet"><br>
-        </div>
-        <div class="row">
-        <label for="inches" class="inch">Inches</label><input id="inches"><br>
-        </div>
-        <div class="row">
-        <input id="button" type="submit" value="Convert to cm">
-        </div>
-        <div id="results"></div>
-    </form>
+    <h1>Rock, Paper, Scissors</h1>
+    <p>Select either rock, paper, or scissors and see if you can beat the computer!</p>
+
+    <p><strong>Remember: <br><br> </strong> “Rock breaks scissors, scissors cuts paper, paper covers rock.” </p>
+    <div class='score'>
+        
+    </div>
+    <div class='message'>
+
+    </div>
+    <button type='button' style="background-color: peachpuff;">Rock</button>
+    <button type='button' style="background-color: aquamarine;">Paper</button>
+    <button type='button' style="background-color: lavender;">Scissors</button>
     <script src="./script.js"></script>
 </body>
 </html>
